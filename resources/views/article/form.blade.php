@@ -20,7 +20,7 @@
           </div>
           <div class="form-group">
             <input type="text" value="html,input,tag,jancuk" data-role="tagsinput">
-            <div class="btn btn-primary btn-sm btn-icon-split">
+            <div class="btn btn-primary btn-sm btn-icon-split" style="cursor: default;">
                 <span class="icon text-white-50">
                   <i class="fas fa-arrow-left"></i>
                 </span>
