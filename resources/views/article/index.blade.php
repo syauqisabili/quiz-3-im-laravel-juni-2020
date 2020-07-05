@@ -2,7 +2,7 @@
 @section('content')
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+      <h6 class="m-0 font-weight-bold text-primary">List Artikel</h6>
     </div>
     <div class="card-body">
       <div class="table-responsive mb-auto">
@@ -18,6 +18,7 @@
                 <th>No</th>
                 <th>Judul</th>
                 <th>Dibuat</th>
+                <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -26,6 +27,7 @@
                 <td> {{ $key+1 }} </td>
                 <td> {{ $item->judul }} </td>
                 <td> {{ $item->created_at }} </td>
+                <td> <a href="/artikel/{{$item->id}}" class="btn btn-primary">Show</a> </td>
               </tr>
               @endforeach
           </tbody>
@@ -42,4 +44,12 @@
 
     <!-- Page level custom scripts -->
     <script src=" {{asset('/sbadmin2/js/demo/datatables-demo.js')}} "></script>
+    <script>
+        Swal.fire({
+            title: 'Berhasil!',
+            text: 'Memasangkan script sweet alert',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+        })
+    </script>
 @endpush
