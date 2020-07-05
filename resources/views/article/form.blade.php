@@ -6,7 +6,8 @@
         <div class="text-center">
           <h1 class="h4 text-gray-900 mb-4">Membuat Artikel Baru</h1>
         </div>
-        <form class="user">
+        <form class="user" action="/artikel" method="POST">
+            @csrf
           <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
               <input type="text" name="judul" class="form-control form-control-user" id="judul" placeholder="Judul">
@@ -19,7 +20,7 @@
             <textarea name="isi" id="isi" class="form-control" rows="3" placeholder="Isi"></textarea>
           </div>
           <div class="form-group">
-            <input type="text" value="html,input,tag,jancuk" data-role="tagsinput">
+            <input name="tag" type="text" value="" data-role="tagsinput">
             <div class="btn btn-primary btn-sm btn-icon-split" style="cursor: default;">
                 <span class="icon text-white-50">
                   <i class="fas fa-arrow-left"></i>

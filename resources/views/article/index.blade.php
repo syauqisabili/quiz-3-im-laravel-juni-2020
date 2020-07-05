@@ -15,23 +15,19 @@
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
             <tr>
-              <th>Username</th>
-              <th>Judul</th>
-              <th>Dibuat</th>
-              <th>Age</th>
-              <th>Start date</th>
-              <th>Salary</th>
+                <th>No</th>
+                <th>Judul</th>
+                <th>Dibuat</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>Tiger Nixon</td>
-              <td>System Architect</td>
-              <td>Edinburgh</td>
-              <td>61</td>
-              <td>2011/04/25</td>
-              <td>$320,800</td>
-            </tr>
+              @foreach ($items as $key => $item)
+              <tr>
+                <td> {{ $key+1 }} </td>
+                <td> {{ $item->judul }} </td>
+                <td> {{ $item->created_at }} </td>
+              </tr>
+              @endforeach
           </tbody>
         </table>
       </div>

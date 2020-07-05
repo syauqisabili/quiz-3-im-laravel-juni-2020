@@ -13,7 +13,7 @@ class ArtikelController extends Controller
 
     public function index(){
         $items = ArtikelModel::getAllData();
-        return view('article.index', compact($items));
+        return view('article.index', compact('items'));
     }
 
     public function create(){
@@ -22,7 +22,7 @@ class ArtikelController extends Controller
 
     public function store(Request $request){
         ArtikelModel::insertData($request->all());
-        return redirect('/article');
+        return redirect('/artikel');
     }
 
     public function show($id){

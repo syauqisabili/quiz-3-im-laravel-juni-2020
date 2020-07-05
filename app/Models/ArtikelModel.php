@@ -14,6 +14,7 @@ class ArtikelModel{
     public static function insertData($data){
         //unset key '_token' and its value  pada array assoc $data
         unset($data['_token']);
+        $data['tb_user_id'] = 1;
         $data['created_at'] = Carbon::now(); //equiv ->format('Y-m-d H:m:s');
         DB::table('tb_articles')->insert($data);
     }
@@ -31,7 +32,7 @@ class ArtikelModel{
                 'isi'           => $data['isi'],
                 'slug'          => $data['slug'],
                 'tag'           => $data['tag'],
-                'tb_user_id'    => $data['slug'],
+                'tb_user_id'    => $data['user_id'],
                 'updated_at'    => $data['updated_at']
             ]
         );
