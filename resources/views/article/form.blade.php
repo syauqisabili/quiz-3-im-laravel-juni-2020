@@ -22,10 +22,10 @@
           <div class="form-group">
             <input name="tag" type="text" value="" data-role="tagsinput">
             <div class="btn btn-primary btn-sm btn-icon-split" style="cursor: default;">
-                <span class="icon text-white-50">
-                  <i class="fas fa-arrow-left"></i>
-                </span>
                 <span class="text">Tag</span>
+                <span class="icon text-white-50">
+                  <i class="fas fa-arrow-right"></i>
+                </span>
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>

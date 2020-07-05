@@ -20,12 +20,12 @@ class ArtikelModel{
     }
 
     public static function findDataById($id){
-        return DB::table('tb_aticles')->where("id", '=', $id)->first();
+        return DB::table('tb_articles')->where("id", '=', $id)->first();
     }
 
     public static function updateDataById($data, $id){
         $data['updated_at'] = Carbon::now(); //equiv ->format('Y-m-d H:m:s');
-
+        $data['user_id'] = 1;
         return DB::table('tb_articles')->where("id", "=", $id)->update(
             [
                 'judul'         => $data['judul'],

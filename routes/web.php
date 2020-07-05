@@ -20,7 +20,7 @@ Route::get('artikel/create','ArtikelController@create'); //membuat artikel baru
 Route::get('artikel/{id}/edit', 'ArtikelController@edit'); //mengedit artikel berdasarkan id tertentu
 
 Route::get('/artikel/{id}', 'ArtikelController@show'); //menampilkan artikel berdasarkan id tertentu
-Route::put('/artikel/{id}', 'ArtikelController@update'); //menyimpan hasil edit artikel berdasarkan id tertentu
-Route::delete('/artikel/{id}', 'ArtikelController@destroy'); //menghapus artikel berdasarkan id tertentu
+Route::put('/artikel/{id}', 'ArtikelController@update')->name('artikel.update'); //menyimpan hasil edit artikel berdasarkan id tertentu
+Route::delete('/artikel/{id}', 'ArtikelController@destroy')->name('artikel.destroy'); //menghapus artikel berdasarkan id tertentu
 
 

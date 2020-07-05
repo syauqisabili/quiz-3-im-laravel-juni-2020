@@ -40,13 +40,13 @@ class ArtikelController extends Controller
     public function update(Request $request, $id){
 
         ArtikelModel::updateDataById($request->all(), $id);
-        $redirect = '/article/' . $id;
-        redirect($redirect);
+        $redirect = '/artikel/' . $id;
+        return redirect($redirect);
     }
 
     public function destroy($id){
 
         ArtikelModel::deleteDataById($id);
-        return redirect('/article');
+        return redirect('/artikel');
     }
 }
