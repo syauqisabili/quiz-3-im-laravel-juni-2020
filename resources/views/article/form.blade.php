@@ -14,10 +14,18 @@
             <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" name="slug" class="form-control form-control-user" id="slug" placeholder="" readonly>
             </div>
-
           </div>
           <div class="form-group">
             <textarea name="isi" id="isi" class="form-control" rows="3" placeholder="Isi"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="text" value="html,input,tag,jancuk" data-role="tagsinput">
+            <div class="btn btn-primary btn-sm btn-icon-split">
+                <span class="icon text-white-50">
+                  <i class="fas fa-arrow-left"></i>
+                </span>
+                <span class="text">Tag</span>
+            </div>
           </div>
           <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
         </form>
@@ -35,4 +43,6 @@
         }
         document.getElementById('judul').addEventListener("input", slugGenerate)
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
 @endpush
